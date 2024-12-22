@@ -1,0 +1,204 @@
+/* Algemene stijl */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header .nav-links a:hover,
+header .nav-links .active {
+    background: #ffcc00;
+    color: #333;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 35%;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+.profile-pic:active {
+    box-shadow: none;
+    border: 3px solid #000;
+}
+
+main {
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.soft-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    /* Zorg ervoor dat tekst en elementen goed schalen */
+    body {
+        font-size: 14px;  /* Kleinere lettergrootte voor kleinere schermen */
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 120px; /* Verklein foto voor mobiele apparaten */
+    }
+
+    .diplomas li, .experiences li {
+        padding: 10px;
+    }
+
+    .skills-table th, .skills-table td {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        flex: none;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra optimalisatie voor kleine schermen (mobiel) */
+    body {
+        font-size: 13px;  /* Kleinere tekst voor kleine schermen */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    img {
+        width: 100px;  /* Foto verder verkleinen op heel kleine schermen */
+    }
+
+    .skills-table th, .skills-table td {
+        font-size: 12px;
+    }
+}
